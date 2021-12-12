@@ -1,34 +1,37 @@
 import {
-  AppBar as App,
-  BottomNavigation,
-  BottomNavigationAction,
+  AppBar as Appbar,
   Button,
-  Toolbar,
-  Typography
+  Toolbar, Typography,
 } from '@mui/material'
+import CarRentalIcon from '@mui/icons-material/CarRental'
 import { Link, useNavigate } from 'react-router-dom'
+import './AppBar.scss'
 
 const AppBar = () => {
-  const history = useNavigate()
+  const navigateTo = useNavigate()
 
   return (
-    <App position="static">
-      <Toolbar>
-        <Typography
-          variant="h6"
-          component="div"
+    <Appbar
+      className="appbar"
+      position="sticky"
+    >
+      <Toolbar className="toolbar">
+        <Link
+          className="nice-look-link"
+          to="/"
         >
-          <Link to="/">Car Share</Link>
-        </Typography>
-        <BottomNavigation>
-          <BottomNavigationAction label="Recents" />
-        </BottomNavigation>
+          <CarRentalIcon fontSize="large" />
+          <Typography variant="h4">
+            Car Share
+          </Typography>
+        </Link>
+
         <Button
           color="inherit"
-          onClick={() => history('/login')}
+          onClick={() => navigateTo('/auth/login')}
         >Войти</Button>
       </Toolbar>
-    </App>
+    </Appbar>
   )
 }
 
