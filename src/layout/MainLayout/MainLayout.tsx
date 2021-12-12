@@ -1,13 +1,15 @@
 import { Box } from '@mui/material'
-import AppBar from '../../components/AppBar/AppBar'
+import AppBar from '../../components/reworked/AppBar/AppBar'
 import { Route, Routes } from "react-router-dom";
 import CatalogPage from "../../pages/CatalogPage/CatalogPage";
 
+import './MainLayout.scss'
+
 const MainLayout = () => {
   return (
-    <Box>
+    <Box className="main">
       <AppBar />
-      <Box>
+      <Box className="content">
         <Routes>
           <Route path='catalog' element={<CatalogPage />}/>
         </Routes>

@@ -1,0 +1,10 @@
+.main {
+  height: 100%;
+  overflow: hidden;
+
+  .content {
+    height: 100%;
+    background-image: url(../../assets/svg/backdround.svg);
+    background-size: contain;
+  }
+}
