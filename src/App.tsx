@@ -10,7 +10,7 @@ import {
   LoginLayout,
   MainLayout,
 } from './layout'
-
+import './App.scss'
 
 function App() {
   return (
@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/*" element={<MainLayout />} />
-          <Route path='/login' element={<LoginLayout />} />
+          <Route path='/auth/*' element={<LoginLayout />} />
           <Route path='*' element={<ErrorLayout />}/>
         </Routes>
       </BrowserRouter>
