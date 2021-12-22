@@ -1,0 +1,47 @@
+.car-card {
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 10px;
+  background-color: #ccc;
+  margin: 6px;
+  .image {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 6px;
+    .main {
+      .brand {
+        font-weight: bold;
+        font-size: 1.3em;
+      }
+      .model {
+        font-size: 1.3em;
+      }
+    }
+    .secondary {
+
+    }
+    .payment {
+      margin: 12px 0;
+      span {
+        font-size: 1.5em;
+      }
+      &:after {
+        content: '₽/час';
+        font-size: 1.5em;
+      }
+    }
+    span {
+      margin: 0 3px;
+    }
+  }
+}

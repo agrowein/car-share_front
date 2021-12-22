@@ -1,8 +1,8 @@
+import { CarCatalog } from "../../components/customized/CarCatalog/CarCatalog";
+
 const CatalogPage = () => {
   return (
-    <div>
-      catalog
-    </div>
+    <CarCatalog/>
   )
 }
 export default CatalogPage
